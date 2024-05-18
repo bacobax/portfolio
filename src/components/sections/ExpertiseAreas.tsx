@@ -122,7 +122,7 @@ const ExpertiseAreas: React.FC = () => {
         <Section className="flex flex-col text-white items-center justify-center gap-20" number={"02"}>
             <h1 className={"text-6xl font-bold"}>Expertise Areas</h1>
 
-            <SegmentedGallery items={cardsData} maxItems={3}>
+            <SegmentedGallery items={cardsData} maxItems={3} className="flex w-full justify-center gap-16">
                 {
                     (card) => (
                         <ExpertiseCard title={card.title} description={card.description} icon={card.icon}/>

@@ -1,21 +1,24 @@
 import React from "react";
 import useCarousel from "../hooks/useCarousel";
 import CarouselControls from "./CarouselControls";
+import Items from "./Items";
 
 interface SegmentedGallery<T> {
-    children: (t: T) => React.ReactNode;
+    children: (t: T, idx: number) => React.ReactNode;
     items: T[];
     maxItems: number;
+    className?: string;
 }
 
-const SegmentedGallery = <T,>({ children, items, maxItems }: SegmentedGallery<T>) => {
+const SegmentedGallery = <T,>({ children, items, maxItems, className }: SegmentedGallery<T>) => {
     const { currentItems, handlePrev, handleNext, totalSlides, currentSlide, setSlide } = useCarousel(items, maxItems);
 
     return (
         <div className="flex flex-col items-center w-full gap-5">
-            <div className="flex w-full justify-center gap-16">
-                {currentItems.map(children)}
-            </div>
+
+            <Items items={currentItems} className={className}>
+                {children}
+            </Items>
             <CarouselControls
                 totalSlides={totalSlides}
                 currentSlide={currentSlide}
