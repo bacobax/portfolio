@@ -1,131 +1,37 @@
 import React from 'react';
-import Section from "../Section";
-import Arrow from "../Arrow";
-import ExpertiseCard from "../ExpertiseCard";
+import Section from "../common/Section";
+import Arrow from "../common/Arrow";
+import ExpertiseCard from "../common/ExpertiseCard";
 import { RiRobot2Fill } from "react-icons/ri";
-import SegmentedGallery from "../SegmentedGallery";
+import SegmentedGallery from "../common/SegmentedGallery";
+import {expertiseAreas} from "../../constants";
+import useWindowSize from "../../hooks/useWindowSize";
 
 
 
 const ExpertiseAreas: React.FC = () => {
-    const cardsData = [
-        {
-            title: {
-                text: "Software Engineering",
-                keyWord: "Software"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
+    const {width, height} = useWindowSize();
 
-        },
-        {
-            title: {
-                text: "Frontend Dev",
-                keyWord: "Frontend"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
+    const isDesktop = width > 800;
+    const isTablet = width > 600 && width <= 800;
+    const isMobile = width <= 600;
+    let numItems;
+    if(isDesktop){
+        numItems = 3;
+    } else if(isTablet){
+        numItems = 2;
+    } else {
+        numItems = 1;
+    }
 
-        },
-        {
-            title: {
-                text: "Backend Dev",
-                keyWord: "Backend"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-        {
-            title: {
-                text: "Data Science",
-                keyWord: "Data"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-        {
-            title: {
-                text: "Machine Learning",
-                keyWord: "Machine"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-        {
-            title: {
-                text: "Artificial Intelligence",
-                keyWord: "Artificial"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-        {
-            title: {
-                text: "Cyber Security",
-                keyWord: "Cyber"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-        {
-            title: {
-                text: "Web Development",
-                keyWord: "Web"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-        {
-            title: {
-                text: "Mobile Development",
-                keyWord: "Mobile"
-            },
-            description: "asdassad asdijuibdfa doiiaofd\n" +
-                "adkhjfaudfbioadbf \n" +
-                "daf aoufbudbfa\n" +
-                "dafuaduoflnbadf",
-            icon: <RiRobot2Fill className={"text-goldenGlow text-4xl"}/>
-
-        },
-    ]
     return (
         <Section className="flex flex-col text-white items-center justify-center gap-20" number={"02"}>
             <h1 className={"text-6xl font-bold"}>Expertise Areas</h1>
 
-            <SegmentedGallery items={cardsData} maxItems={3} className="flex w-full justify-center gap-16">
+            <SegmentedGallery items={expertiseAreas} maxItems={numItems} className="flex w-full justify-center gap-16">
                 {
-                    (card) => (
-                        <ExpertiseCard title={card.title} description={card.description} icon={card.icon}/>
+                    (e) => (
+                        <ExpertiseCard title={e.title} description={e.description} Icon={e.icon}/>
                     )
                 }
             </SegmentedGallery>

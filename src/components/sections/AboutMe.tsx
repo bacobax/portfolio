@@ -1,27 +1,19 @@
 import React from 'react';
-import Section from "../Section";
-import Arrow from "../Arrow";
-import SkillSheet from "../SkillSheet";
-import {skills} from "../../constants";
+import Section from "../common/Section";
+import Arrow from "../common/Arrow";
+import SkillSheet from "../common/SkillSheet";
+import {longDescription, skills} from "../../constants";
+import ReadMore from "../common/ReadMore";
 
 const AboutMe: React.FC = () => {
   return (
     <Section className="flex flex-col text-white items-center justify-center gap-20" number={"03"}>
-        <div className={"flex"}>
-            <Arrow color={"white"} className={"w-[400px]"} strokeWidth={1}/>
+        <div className={"flex flex-col md:flex-row mt-20 sm:mt-0"}>
+            <Arrow color={"white"} className={"opacity-0 sm:opacity-100 sm:w-1/2 md:w-1/2"} strokeWidth={1}/>
             <h1 className={"text-6xl font-bold"}>About me</h1>
         </div>
         <div className={"flex justify-center items-center w-full gap-10"}>
-            <div className={"w-[250px] h-[250px] bg-black flex justify-center items-center"}>
-                <h1>Image</h1>
-            </div>
-            <p className={"h-full max-w-[50%]"}>
-                plicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut
-                odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione
-                voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem
-                ipsum, quia dolor sit, amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi temcorporis sus
-            </p>
+            <ReadMore className={"h-full w-4/5"} text={longDescription} maxLength={500} />
         </div>
         <SkillSheet skills={skills} />
 
