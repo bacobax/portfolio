@@ -25,6 +25,7 @@ const Contacts: React.FC = () => {
                     </div>
                 )}
             </Items>
+
              <EmailForm className={"w-full sm:w-1/2"}/>
           </div>
           <SocialMedia />
