@@ -5,8 +5,11 @@ import {briefSelfDescription} from "../../constants";
 // @ts-ignore
 import profileImage from "../../assets/profile_image.png"
 import {Image} from "@nextui-org/image";
+import useTypingEffect from "../../hooks/useTypingEffect";
+import Cursor from "../common/Cursor";
 
 const Cover: React.FC = () => {
+    const displayedText = useTypingEffect("Francesco Bassignana", 50)
     return (
         <Section className="flex flex-col justify-end text-white items-end" number={"01"}>
 
@@ -18,7 +21,7 @@ const Cover: React.FC = () => {
                         <Arrow color={"#EDC789"} className={"w-full"} strokeWidth={1}/>
                     </div>
                     <div className={"flex flex-col w-3/5"}>
-                        <h1 className={"text-6xl font-bol"}>I'm Francesco Bassignana</h1>
+                        <h1 className={"text-6xl font-bol"}>{displayedText} <Cursor /></h1>
                         <p>{briefSelfDescription}</p>
                     </div>
                 </div>
