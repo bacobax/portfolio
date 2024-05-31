@@ -8,10 +8,11 @@ const useTypingEffect = (text: string, speed: number) => {
         const interval = setInterval(() => {
             setDisplayedText((prev) => prev + (text[index] ? text[index] : ''));
             index += 1;
-            if (index === text.length) {
+            if (index >= text.length) {
                 clearInterval(interval);
             }
         }, speed);
+
         return () => clearInterval(interval);
     }, [text, speed]);
 

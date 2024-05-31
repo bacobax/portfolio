@@ -9,13 +9,12 @@ import useTypingEffect from "../../hooks/useTypingEffect";
 import Cursor from "../common/Cursor";
 
 const Cover: React.FC = () => {
-    const displayedText = useTypingEffect("Francesco Bassignana", 50)
+    const displayedText = useTypingEffect("Frrancesco Bassignana", 50)
     return (
         <Section className="flex flex-col justify-end text-white items-end" number={"01"}>
 
             <div className={"flex flex-col md:flex-row w-full justify-between"}>
-                    <img alt={"cover image"} src={profileImage}  className={"self-center md:w-1/5 max-w-[350px]"}/>
-
+                    <img alt={"cover image"} src={profileImage}  className={"self-center my-[100px] md:my-0 md:w-1/5 w-1/2 max-w-[350px]"}/>
                 <div className={"flex flex-col md:flex-row self-end md:w-4/5"}>
                     <div className={"w-2/5"}>
                         <Arrow color={"#EDC789"} className={"w-full"} strokeWidth={1}/>

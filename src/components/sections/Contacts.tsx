@@ -8,6 +8,7 @@ import Items from "../common/Items";
 import {contacts} from "../../constants";
 import SocialMedia from "../common/SocialMedia";
 import EmailForm from "../common/EmailForm";
+import Footer from "../common/Footer";
 
 const Contacts: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const Contacts: React.FC = () => {
              <EmailForm className={"w-full sm:w-1/2"}/>
           </div>
           <SocialMedia />
+          <Footer />
       </Section>
   );
 }
