@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                     <p>P.IVA: IT04081230049</p>
                 </div>
                 <div>
-                    <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Quicksolver. All rights reserved.</p>
                 </div>
             </div>
         </footer>
