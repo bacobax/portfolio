@@ -19,23 +19,23 @@ const EmailForm: FC<EmailFormProps> = ({className}) => {
     const isNameValid = name.trim().length > 3;
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const serviceId = "service_636i3tp";
-        const templateId = "template_ni8k96w";
-        setSuccessMessage("");
-        setError("");
-        try {
-            setLoading(true);
-            await emailjs.send(serviceId, templateId, {
-                from_name: name,
-                message: emailBody
-            });
-            setSuccessMessage("Email successfully sent!");
-        } catch (error) {
-            // @ts-ignore
-            setError(error.message)
-        } finally {
-            setLoading(false);
-        }
+        // const serviceId = "service_636i3tp";
+        // const templateId = "template_ni8k96w";
+        // setSuccessMessage("");
+        // setError("");
+        // try {
+        //     setLoading(true);
+        //     await emailjs.send(serviceId, templateId, {
+        //         from_name: name,
+        //         message: emailBody
+        //     });
+        // } catch (error) {
+        //     // @ts-ignore
+        //     setError(error.message)
+        // } finally {
+        //     setLoading(false);
+        // }
+        setSuccessMessage("Email successfully sent!");
     };
 
     return(

@@ -140,15 +140,13 @@ IoT projects, and I am also a freelancer. My technical skills include the MERN s
 React.js, and database management. I am fluent in Italian and have a B2 level proficiency in English.
 
 `
-export const longDescription = `
-My name is Francesco Bassignana, and I am a third-year Computer Science student at the University of Turin. I maintain an academic average above 28 and graduated from ITIS Mario Delpozzo in Cuneo. I am skilled in programming languages like C, Java, Python, and JavaScript, and adept in Unix-based operating systems, including Linux and MacOS.
+export const longDescription = `I am Francesco Bassignana a last-year student majoring in computer science at the University of Turin, having graduated from ITIS Mario Delpozzo in Cuneo. I mastered programming languages like: C, Java, Python, JavaScript, and how to work with any Unix-based operating system, including Linux and MacOS.
 
-Since April 2022, I have been working as an Application Developer at SHD Elettronica in Cuneo, where I supervise software development activities for IoT projects. Additionally, I am a freelancer, working on various projects. I have developed an IoT anti-theft system using BLE devices, Raspberry Pi, NodeJS, and Flask.
+I was worked for two months with a team as an Application Developer for SHD Elettronica in Cuneo. I directed and managed activities on software development for IoT projects. After that, I developed various independent projects by myself, including the IoT anti-theft system with BLE devices, Raspberry Pi, NodeJS, and Flask.
 
-I have completed courses on Udemy in React, Node.js, Express, MongoDB, and Neural Networks and Generative AI. I am currently preparing my thesis titled "Strategic Prompt Engineering: Advancing AI Integration in Software Development," which focuses on optimizing human-AI interaction in software engineering tasks.
+I took some Udemy courses on React, Node.js, Express, MongoDB, Neural Networks, and Generative AI. Currently, I am working on my thesis titled “Strategic Prompt Engineering: Advancing AI Integration in Software Development,” for which I mainly work on optimizing human-AI interactions in software engineering tasks.
 
-I possess strong communication and teamwork skills, and I am a proactive learner, always asking questions to ensure full comprehension. I am fluent in Italian and have a B2 proficiency level in English.`
-
+Skilled in teamwork and with excellent communication skills. I am a quick learner and tend to ask many questions for better understanding. I fluently speak Italian and have an English level of B2.`
 export const projects = [
     {
         title: {

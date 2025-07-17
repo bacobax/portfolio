@@ -14,7 +14,7 @@ const Cover: React.FC = () => {
         <Section className="flex flex-col justify-end text-white items-end" number={"01"}>
 
             <div className={"flex flex-col md:flex-row w-full justify-between"}>
-                    <img alt={"cover image"} src={profileImage}  className={"self-center my-[100px] md:my-0 md:w-1/5 w-1/2 max-w-[350px]"}/>
+                    <img alt={"cover image"} src={profileImage}  className={"self-center my-[100px] md:my-0 md:w-1/5 w-1/2 max-w-[350px] border-2 border-white rounded-md"}/>
                 <div className={"flex flex-col md:flex-row self-end md:w-4/5"}>
                     <div className={"w-2/5"}>
                         <Arrow color={"#EDC789"} className={"w-full"} strokeWidth={1}/>
